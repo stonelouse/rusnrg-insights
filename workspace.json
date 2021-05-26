@@ -3,17 +3,26 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
-  "projects": {},
   "generators": {
     "@nrwl/angular:application": {
       "linter": "eslint",
+      "strict": true,
       "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "e2eTestRunner": "cypress",
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "prefix": "nrg",
+      "skipTests": true,
+      "style": "scss",
+      "tags": "type:app",
+      "viewEncapsulation": "None"
     },
     "@nrwl/angular:library": {
       "linter": "eslint",
+      "strict": true,
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {}
-  }
+  },
+  "projects": {}
 }
