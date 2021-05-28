@@ -37,7 +37,6 @@ specifiers:
   jest-preset-angular: ~8.4.0
   prettier: ~2.2.1
   rxjs: ~6.6.0
-  rxjs-compat: ^6.6.7
   ts-jest: ~26.5.5
   ts-node: ~9.1.1
   tslib: ~2.0.0
@@ -85,7 +84,6 @@ devDependencies:
   jest: 26.2.2_ts-node@9.1.1
   jest-preset-angular: 8.4.0_191014be49a83f4680513ce4f81aab94
   prettier: 2.2.1
-  rxjs-compat: 6.6.7
   ts-jest: 26.5.5_jest@26.2.2+typescript@4.2.4
   ts-node: 9.1.1_typescript@4.2.4
   typescript: 4.2.4
@@ -9632,10 +9630,6 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
-    dev: true
-
-  /rxjs-compat/6.6.7:
-    resolution: {integrity: sha512-szN4fK+TqBPOFBcBcsR0g2cmTTUF/vaFEOZNuSdfU8/pGFnNmmn2u8SystYXG1QMrjOPBc6XTKHMVfENDf6hHw==}
     dev: true
 
   /rxjs-for-await/0.0.2_rxjs@6.6.7:
