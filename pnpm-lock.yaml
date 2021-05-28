@@ -37,7 +37,6 @@ specifiers:
   jest-preset-angular: ~8.4.0
   prettier: ~2.2.1
   rxjs: ~6.6.0
-  rxjs-compat: ~6.6.7
   ts-jest: ~26.5.5
   ts-node: ~9.1.1
   tslib: ~2.0.0
@@ -55,7 +54,6 @@ dependencies:
   '@angular/router': 12.0.0_ec6f1dd00b5eff5e77cd16622d78872d
   '@nrwl/angular': 12.3.4_f04678e687c56c1fd82249b60945dd2f
   rxjs: 6.6.7
-  rxjs-compat: 6.6.7
   tslib: 2.0.3
   zone.js: 0.11.4
 
@@ -9619,10 +9617,6 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
-
-  /rxjs-compat/6.6.7:
-    resolution: {integrity: sha512-szN4fK+TqBPOFBcBcsR0g2cmTTUF/vaFEOZNuSdfU8/pGFnNmmn2u8SystYXG1QMrjOPBc6XTKHMVfENDf6hHw==}
-    dev: false
 
   /rxjs-for-await/0.0.2_rxjs@6.6.7:
     resolution: {integrity: sha512-IJ8R/ZCFMHOcDIqoABs82jal00VrZx8Xkgfe7TOKoaRPAW5nH/VFlG23bXpeGdrmtqI9UobFPgUKgCuFc7Lncw==}
