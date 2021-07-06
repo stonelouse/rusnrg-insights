@@ -1,5 +1,13 @@
 name: Energy Insights CI
 
+env:
+  node-version: 14.x
+  NODE_OPTIONS: --max_old_space_size=6144
+  # for Nx Cloud
+  NX_BRANCH: ${{ github.event.number }}
+  NX_RUN_GROUP: ${{ github.run_id }}
+
+
 on:
   push:
     branches:
@@ -16,10 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2 
 
-      - name: Setup Node.js
+      - name: Setup Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: ${{ env.node-version }}
       - name: Install PNPM
         run: npm install --global pnpm
       - name: Install dependencies
@@ -28,34 +36,18 @@ jobs:
       - name: Build Angular app
         run: pnpm run build
 
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2 
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - name: Install PNPM
-        run: npm install --global pnpm
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Test projects
-        run: pnpm test
-
   lint:
+    # linting should only run for pull requests
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2 
 
-      - name: Setup Node.js
+      - name: Setup Node.js ${{ env.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: ${{ env.node-version }}
       - name: Install PNPM
         run: npm install --global pnpm
       - name: Install dependencies
@@ -63,3 +55,21 @@ jobs:
 
       - name: Lint workspace and projects
         run: pnpm lint
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2 
+
+      - name: Setup Node.js ${{ env.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
+      - name: Install PNPM
+        run: npm install --global pnpm
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Test projects
+        run: pnpm test
