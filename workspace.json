@@ -21,7 +21,8 @@
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "strict": true
+      "strict": true,
+      "prefix": "nrg"
     },
     "@nrwl/angular:component": {
       "style": "scss"
