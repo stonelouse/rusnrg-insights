@@ -24,6 +24,9 @@
   "projects": {
     "energy-insights-app": {
       "tags": ["type:app"]
+    },
+    "co2-data-access": {
+      "tags": ["scope:co2", "type:data-access"]
     }
   }
 }

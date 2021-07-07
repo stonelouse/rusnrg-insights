@@ -48,7 +48,9 @@
               "apps/energy-insights-app/src/favicon.ico",
               "apps/energy-insights-app/src/assets"
             ],
-            "styles": ["apps/energy-insights-app/src/styles.scss"],
+            "styles": [
+              "apps/energy-insights-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -113,10 +115,39 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/energy-insights-app"],
+          "outputs": [
+            "coverage/apps/energy-insights-app"
+          ],
           "options": {
             "jestConfig": "apps/energy-insights-app/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "co2-data-access": {
+      "projectType": "library",
+      "root": "libs/co2/data-access",
+      "sourceRoot": "libs/co2/data-access/src",
+      "prefix": "nrg",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/co2/data-access"
+          ],
+          "options": {
+            "jestConfig": "libs/co2/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/co2/data-access/src/**/*.ts",
+              "libs/co2/data-access/src/**/*.html"
+            ]
           }
         }
       }
