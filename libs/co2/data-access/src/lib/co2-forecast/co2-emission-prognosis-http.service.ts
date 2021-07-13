@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Co2EmissionPrognosisRecord } from './co2-emission-prognosis-record';
+import { Co2EmissionPrognosisRecords } from './co2-emission-prognosis-record';
 
 // see https://www.energidataservice.dk/tso-electricity/co2emisprog DATA API dialog
 
@@ -17,7 +17,7 @@ const url = 'https://api.energidataservice.dk/datastore_search_sql';
   providedIn: 'root',
 })
 export class Co2EmissionPrognosisHttp {
-  get(): Observable<readonly Co2EmissionPrognosisRecord[]> {
+  get(): Observable<Co2EmissionPrognosisRecords> {
     return of([]);
   }
 }
